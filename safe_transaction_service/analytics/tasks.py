@@ -14,7 +14,7 @@ from safe_transaction_service.analytics.services.analytics_service import (
     AnalyticsService,
 )
 from safe_transaction_service.history.models import MultisigTransaction, SafeContract, SafeLastStatus
-from safe_transaction_service.history.services.balance_service import BalanceServiceProvider
+from safe_transaction_service.history.services.balance_service import BalanceService, BalanceServiceProvider
 from safe_transaction_service.utils.celery import task_timeout
 from safe_transaction_service.utils.redis import get_redis
 from safe_transaction_service.utils.tasks import LOCK_TIMEOUT

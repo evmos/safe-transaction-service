@@ -3,7 +3,6 @@ import logging
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from typing import List, Tuple
 
-from django.conf import settings
 from django.db.models import Count, F, Q
 from django.utils import timezone
 
@@ -15,7 +14,6 @@ from safe_transaction_service.analytics.services.analytics_service import (
 )
 from safe_transaction_service.history.models import MultisigTransaction, SafeContract, SafeLastStatus
 from safe_transaction_service.history.services.balance_service import BalanceService, BalanceServiceProvider
-from safe_transaction_service.utils.celery import task_timeout
 from safe_transaction_service.utils.redis import get_redis
 from safe_transaction_service.utils.tasks import LOCK_TIMEOUT, SOFT_TIMEOUT
 from safe_transaction_service.utils.utils import chunks

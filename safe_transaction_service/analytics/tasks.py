@@ -131,7 +131,8 @@ def _calculate_native_balances_batched() -> Tuple[int, int]:
     return total_balance_wei, total_safes_with_balance
 
 
-@app.shared_task(soft_time_limit=SOFT_TIMEOUT, time_limit=LOCK_TIMEOUT)
+@app.shared_task()
+@task_timeout(timeout_seconds=LOCK_TIMEOUT)
 def get_transactions_per_safe_app_task():
     today = timezone.now()
     last_week = today - relativedelta(days=7)

@@ -49,7 +49,7 @@ FORCE_SCRIPT_NAME = env("FORCE_SCRIPT_NAME", default=None)
 SSO_ENABLED = False
 
 # Enable analytics endpoints
-ENABLE_ANALYTICS = env("ENABLE_ANALYTICS", default=False)
+ENABLE_ANALYTICS = env("ENABLE_ANALYTICS", default=True)
 
 # GUNICORN
 GUNICORN_REQUEST_TIMEOUT = gunicorn_request_timeout
